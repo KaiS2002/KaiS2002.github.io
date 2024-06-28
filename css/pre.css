@@ -1,0 +1,13 @@
+.code{
+	width: 678px;
+    margin: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 3px;
+    padding: 10px 6px;
+    overflow-y: auto;// 垂直方向 使用滚动条来兼容高度
+}
+.code pre{
+	white-space: pre-wrap; 
+    word-wrap: break-word; 
+    // 水平方向 换行来兼容宽度,内容错位的话，会自动换行的。(顶多就是有点儿不好看，但是输入的时候应该限制一下)
+}
