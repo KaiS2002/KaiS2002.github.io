@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>2.Java面向对象基础</title><!--抬头-->
+		<!-- meta -->
+		<meta charset="UTF-8">
+		<!-- css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+	<style>
+	    .code{
+	    	width: 678px;
+	        margin: 4px;
+	        border: 1px solid rgba(255,255,255,0.3);
+	        border-radius: 3px;
+	        padding: 10px 6px;
+	        overflow-y: auto;
+	    }
+	    .code pre{
+	    	white-space: pre-wrap; 
+	        word-wrap: break-word; 
+	    }
+	  </style>
+	<body>
+		<div class="container">
+			<header id="site-header">
+				<div class="row">
+					<div class="col-md-4 col-sm-5 col-xs-8">
+						<div class="logo">
+							<h1><a href="index.html">去首页</a></h1>
+						</div>
+					</div>
+                </div>
+			</header>
+		</div>
+		<div class="content-body">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-8">
+						
+						<article class="text" style="text-align: center;">
+							<header class="entry-header">
+								<h1 class="entry-title">
+									<a>2.Java面向对象基础</a><!--标题-->
+								</h1>
+								<div class="entry-meta">
+									<span class="post-category"><a>Java</a></span>
+									<span class="date"><time class="entry-date"><a>2024年7月1日</a></span><!--日期-->
+								</div>
+							</header>
+							<div class="entry-content clearfix">
+								<p style="text-align: center;"><!--正文-->
+									面向对象编程，是一种通过对象的方式，把现实世界映射到计算机模型的一种编程方法。<br />
+									现实世界中，我们定义了“人”这种抽象概念，而具体的人则是“小明”、“小红”、“小军”等一个个具体的人。
+									所以，“人”可以定义为一个类（class），而具体的人则是实例（instance）<br />
+									class是一种对象模版，它定义了如何创建实例，因此，class本身就是一种数据类型<br />
+									而instance是对象实例，instance是根据class创建的实例，可以创建多个instance，每个instance类型相同，但各自属性可能不相同<br />
+									在Java中，创建一个类，例如，给这个类命名为Person，就是定义一个class：<br />
+									<textarea readonly style="height: 150px;width: 100%;overflow: auto;resize: none;">
+class Person {
+    public String name;
+   public int age;
+}
+									</textarea><br />
+									一个class可以包含多个字段（field），字段用来描述一个类的特征。上面的Person类，我们定义了两个字段，一个是String类型的字段，命名为name，一个是int类型的字段，命名为age。因此，通过class，把一组数据汇集到一个对象上，实现了数据封装。<br />
+									public是用来修饰字段的，它表示这个字段可以被外部访问。<br />
+									定义了class，只是定义了对象模版，而要根据对象模版创建出真正的对象实例，必须用new操作符。<br />
+									new操作符可以创建一个实例，然后，我们需要定义一个引用类型的变量来指向这个实例：<br />
+									<textarea readonly style="height: 150px;width: 100%;overflow: auto;resize: none;">
+										Person ming = new Person();
+									</textarea><br />
+									上述代码创建了一个Person类型的实例，并通过变量ming指向它。<br />
+									注意区分Person ming是定义Person类型的变量ming，而new Person()是创建Person实例。<br />
+									有了指向这个实例的变量，我们就可以通过这个变量来操作实例。访问实例变量可以用 变量.字段<br />
+									<textarea readonly style="height: 300px;width: 100%;overflow: auto;resize: none;">
+ming.name = "Xiao Ming"; // 对字段name赋值
+ming.age = 12; // 对字段age赋值
+System.out.println(ming.name); // 访问字段name
+Person hong = new Person();
+hong.name = "Xiao Hong";
+hong.age = 15;
+									</textarea><br />
+									上述两个变量分别指向两个不同的实例<br />
+									两个instance拥有class定义的name和age字段，且各自都有一份独立的数据，互不干扰<br />
+								</p>
+							</div>
+						</article>
+						
+						<div class="pagination-simple">
+						    <a href="java-1.html" style="float: left;">上一页</a><!--上一页-->
+						    <a href="java-3" style="float: right;">下一页</a><!--下一页-->
+						</div>
+					</main>
+					<aside class="col-md-4">
+						<div class="widget widget-recent-posts">
+							<h3 class="widget-title">分类</h3>
+							<ul>
+								<li><a href="java-all-in-one.html">Java</a></li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<footer id="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copyright">
+							<a>表面内卷化咸鱼王</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
